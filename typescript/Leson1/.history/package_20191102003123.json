@@ -1,0 +1,12 @@
+{
+  "name": "Leson1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "greeter.js",
+  "scripts": {
+    "build": "tsc greeter.ts"
+    },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
