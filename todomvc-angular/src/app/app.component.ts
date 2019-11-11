@@ -30,6 +30,12 @@ export class AppComponent {
     done: boolean
   }[] = todos;
 
+  public currentEditing: {
+    id: number,
+    title: string,
+    done: boolean
+  } = null;
+
   addTodo(e): void {
     const titleText = e.target.value;
     if (!titleText.length) {
