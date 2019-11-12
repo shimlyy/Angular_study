@@ -1,0 +1,26 @@
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+ul li{
+  display: inline;
+  margin: 0 7px;
+  padding: 0;
+  white-space: nowrap;
+}
+
+a {
+  text-decoration: none;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  color: black;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.active {
+  color: red;
+}
