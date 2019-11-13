@@ -5,7 +5,10 @@ ul {
 }
 
 ul li{
-  display: inline;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   margin: 0 7px;
   padding: 0;
   white-space: nowrap;
@@ -23,4 +26,13 @@ a {
 
 .active {
   color: red;
+  border-bottom: brown 2px dotted ;
 }
+/*
+.indicator {
+  background: brown;
+  height: 2px;
+  width: 10px;
+  margin-top: 2px;
+} */
+
