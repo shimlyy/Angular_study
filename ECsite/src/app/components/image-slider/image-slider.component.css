@@ -5,6 +5,9 @@
 .container .image-slider{
   display: flex;
   overflow-x: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
 .nav-section {
@@ -29,6 +32,13 @@
   margin: 5px;
 }
 
-/* .image-slider img{
-  height: 100px;
-} */
+ .image-slider img{
+  scroll-snap-align: start;
+  height: 100%;
+  width: 100%;
+  object-fit: cover; /*保持原有尺寸比例。保证替换内容尺寸一定大于容器尺寸，宽度和高度至少有一个和容器一致。*/
+}
+
+.nav-section .slider-button-select{
+  background-color: red;
+}

@@ -2,12 +2,14 @@ ul {
   margin: 0;
   padding: 0;
   display: flex;
+  overflow-x: auto;  /*如果溢出框则提供滚动机制*/
+  -webkit-overflow-scrolling: touch; /*手机触屏滚动功能*/
 }
 
 ul li{
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  /* flex-direction: column;
+  justify-content: space-between; */
   align-items: center;
   margin: 0 7px;
   padding: 0;
@@ -17,7 +19,7 @@ ul li{
 a {
   text-decoration: none;
   font-family: 'M PLUS Rounded 1c', sans-serif;
-  color: rgb(255, 255, 255);
+  color: #EEEEEE;
 }
 
 ::-webkit-scrollbar {
@@ -25,8 +27,8 @@ a {
 }
 
 .active {
-  color: red;
-  border-bottom: brown 2px dotted ;
+  color: #FD7013;
+  border-bottom: #FD7013 2px solid ;
 }
 /*
 .indicator {

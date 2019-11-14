@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TopMenu } from './components';
+import { TopMenu, ImageSlider } from './components';
 
 @Component({
   selector: 'app-root',
@@ -66,7 +66,7 @@ topmenus: TopMenu[] = [
     }
 ];
 
-imageSliders: imageSlider[] = [
+imageSliders: ImageSlider[] = [
   {
     imgUrl: 'https://actus-prod.store-image.jp/shop_contents_headline/1704/shop_contents_headline_group_member_1704.jpg?ts=20191107132638',
     link: '',
@@ -87,6 +87,11 @@ imageSliders: imageSlider[] = [
     link: '',
     caption: ''
   },
+  {
+    imgUrl: 'https://actus-prod.store-image.jp/shop_contents_headline/1696/shop_contents_headline_group_member_1696.jpg?ts=20191029161335',
+    link: '',
+    caption: ''
+  }
 
 ];
 
