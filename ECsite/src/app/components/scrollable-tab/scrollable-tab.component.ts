@@ -14,6 +14,7 @@ export interface TopMenu {
 export class ScrollableTabComponent implements OnInit {
   selectedIndex = -1;
   @Input() menus: TopMenu[] = [];
+  @Input() backgroundColor: '#fff';
   @Output() tabSelected = new EventEmitter();
   constructor() { }
 
