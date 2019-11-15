@@ -5,7 +5,7 @@
 .container .image-slider{
   display: flex;
   overflow-x: scroll;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /*顺滑*/
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
 }
