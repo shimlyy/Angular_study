@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TopMenu, ImageSlider } from './components';
+import { TopMenu, ImageSlider } from './shared/components';
 
 @Component({
   selector: 'app-root',
