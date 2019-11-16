@@ -1,2 +1,4 @@
-<input type="text" [(ngModel)]="username">
-<span>{{username}}さん　こんにちは</span>
+<div appGridItem *ngFor="let item of channels">
+  <img src="item.icom" alt="" appGridItemImage>
+  <span appGridItemTitle>{{item.title}}</span>
+</div>
