@@ -20,7 +20,7 @@ export class HorizontalGridComponent implements OnInit {
 
   ngOnInit() {}
 
-  public get scrollable() : boolean {
+  public get scrollable(): boolean {
     return this.cols > this.displayCols;
   }
 
