@@ -1,5 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 
+class Product {
+  constructor(private name: string) {
+
+  }
+}
+
+class PurchaseOrder {
+  private amount: number;
+  constructor(private product: Product) {
+  }
+}
+
 @Component({
   selector: 'app-home-grand',
   templateUrl: './home-grand.component.html',
