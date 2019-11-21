@@ -12,7 +12,9 @@ export class HomeContainerComponent implements OnInit {
   constructor(private router: Router, private services: HomeService) {}
   topMenus: TopMenu[] = [];
   ngOnInit(): void {
-    this.topMenus = this.services.getTabs();
+    this.services.getTabs().subscribe(tabs => {
+      this.topMenus = tabs;
+    });
   }
 
   handleTabSelected(topMenu: TopMenu) {
