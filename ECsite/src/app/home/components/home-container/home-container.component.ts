@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Observable } from 'rxjs';
+
 import { TopMenu } from 'src/app/shared/components';
 import { Router } from '@angular/router';
 import { HomeService } from '../../services';
@@ -6,15 +8,14 @@ import { HomeService } from '../../services';
 @Component({
   selector: 'app-home-container',
   templateUrl: './home-container.component.html',
-  styleUrls: ['./home-container.component.css']
+  styleUrls: ['./home-container.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeContainerComponent implements OnInit {
   constructor(private router: Router, private services: HomeService) {}
-  topMenus: TopMenu[] = [];
+  topMenus$: Observable<TopMenu[]>;
   ngOnInit(): void {
-    this.services.getTabs().subscribe(tabs => {
-      this.topMenus = tabs;
-    });
+    this.topMenus$ = this.services.getTabs();
   }
 
   handleTabSelected(topMenu: TopMenu) {
