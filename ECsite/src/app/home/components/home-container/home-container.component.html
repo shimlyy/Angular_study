@@ -1,5 +1,5 @@
 <app-scrollable-tab
-[menus]="topMenus"
+[menus]="topMenus$ | async"
 (tabSelected)="handleTabSelected($event)"
 [backgroundColor]="'#414141'"
 ></app-scrollable-tab>
