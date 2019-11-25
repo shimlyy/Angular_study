@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
 import { NavigationEnd, Router } from '@angular/router';
-import { TabItem } from './shared/domain';
+import { TabItem } from './shared';
 
 @Component({
   selector: 'app-root',

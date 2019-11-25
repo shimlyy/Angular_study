@@ -1,20 +1,21 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-@Pipe({name: 'appAgo'})
+@Pipe({ name: 'appAgo' })
 export class AgoPipe implements PipeTransform {
   transform(value: any): any {
     if (value) {
       const seconds = Math.floor((+new Date() - +new Date(value)) / 1000);
-      if (seconds < 30) {
+      if (seconds < 29) {
+        // 小于 30 秒
         return '刚刚';
       }
       const intervals = {
         年: 3600 * 24 * 365,
         月: 3600 * 24 * 30,
         周: 3600 * 24 * 7,
-        日: 3600 * 24,
-        时: 3600,
-        分: 60,
+        天: 3600 * 24,
+        小时: 3600,
+        分钟: 60,
         秒: 1
       };
       let counter = 0;
