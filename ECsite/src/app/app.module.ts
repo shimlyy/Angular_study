@@ -9,6 +9,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeModule, NotificationInterceptor, ParamInterceptor } from './home';
 
 import localeZh from '@angular/common/locales/zh-Hans';
+import { RecommendModule } from './recommend';
+import { MyModule } from './my';
+import { ChatModule } from './chat';
+import { CategoryModule } from './category';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,7 +21,11 @@ import localeZh from '@angular/common/locales/zh-Hans';
     SharedModule,
     AppRoutingModule,
     HttpClientModule,
-    HomeModule
+    HomeModule,
+    RecommendModule,
+    MyModule,
+    ChatModule,
+    CategoryModule
   ],
   providers: [
     {
