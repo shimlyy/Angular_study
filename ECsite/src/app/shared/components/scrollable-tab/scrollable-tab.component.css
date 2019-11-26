@@ -1,40 +1,28 @@
 ul {
-  margin: 0;
   padding: 0;
+  margin: 0;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
   display: flex;
-  overflow-x: auto;  /*如果溢出框则提供滚动机制*/
-  -webkit-overflow-scrolling: touch; /*手机触屏滚动功能*/
+  justify-content: space-between;
 }
-
-ul li{
+ul li {
   display: flex;
-  /* flex-direction: column;
-  justify-content: space-between; */
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  margin: 0 7px;
+  margin: 0 5px;
   padding: 0;
   white-space: nowrap;
 }
-
 a {
   text-decoration: none;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  color: #EEEEEE;
 }
-
 ::-webkit-scrollbar {
   display: none;
 }
-
-.active {
-  color: #FD7013;
-  border-bottom: #FD7013 2px solid ;
-}
-/*
 .indicator {
-  background: brown;
   height: 2px;
-  width: 10px;
+  width: 2rem;
   margin-top: 2px;
-} */
-
+}
