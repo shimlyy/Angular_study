@@ -7,7 +7,8 @@ import {
   HorizontalGridComponent,
   CountDownComponent,
   FooterComponent,
-  VerticalGridComponent
+  VerticalGridComponent,
+  ProductCardComponent
 } from './components';
 import {
   GridItemDirective,
@@ -27,7 +28,8 @@ import { AgoPipe } from './pipes';
     AgoPipe,
     CountDownComponent,
     FooterComponent,
-    VerticalGridComponent
+    VerticalGridComponent,
+    ProductCardComponent
   ],
   imports: [CommonModule, FormsModule],
   exports: [
@@ -42,7 +44,8 @@ import { AgoPipe } from './pipes';
     AgoPipe,
     CountDownComponent,
     FooterComponent,
-    VerticalGridComponent
+    VerticalGridComponent,
+    ProductCardComponent
   ]
 })
 export class SharedModule {}
