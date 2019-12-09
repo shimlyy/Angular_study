@@ -10,4 +10,4 @@ GET http://apis.imooc.com/api/channels?icode=F5896C9E90868479 HTTP/1.1
 GET http://apis.imooc.com/api/ads?icode=F5896C9E90868479 HTTP/1.1
 
 ###
-GET http://apis.imooc.com/api/products?icode=F5896C9E90868479 HTTP/1.1
+GET http://apis.imooc.com/api/products?icode=1FB736A0F071BE7A HTTP/1.1

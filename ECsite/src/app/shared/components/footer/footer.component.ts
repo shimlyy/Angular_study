@@ -1,4 +1,11 @@
-import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Output,
+  EventEmitter,
+  Input,
+  ChangeDetectionStrategy
+} from '@angular/core';
 import { TabItem } from '../../domain';
 
 @Component({
@@ -8,6 +15,7 @@ import { TabItem } from '../../domain';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FooterComponent implements OnInit {
+  @Output() tabSelected = new EventEmitter<TabItem>();
   tabItems: TabItem[] = [
     {
       title: '首页',
@@ -41,15 +49,12 @@ export class FooterComponent implements OnInit {
     }
   ];
   @Input() selectedIndex = 0;
-  @Output() tabSelected = new EventEmitter();
-  toggleSelectedTab(idx: number) {
+  constructor() {}
+
+  ngOnInit() {}
+
+  toggleSelected(idx: number) {
     this.selectedIndex = idx;
-    this.tabSelected.emit(this.tabItems[idx]);
+    this.tabSelected.emit(this.tabItems[this.selectedIndex]);
   }
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
 }

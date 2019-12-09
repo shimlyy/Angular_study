@@ -1,14 +1,17 @@
 <div class="container">
-  <img [src]="product.imageUrl" alt="" class="product-image">
+  <img [src]="product.imageUrl" alt="" class="product-image" />
   <div class="product-title">
-    {{product.title}}
+    {{ product.title }}
   </div>
   <div class="product-tags">
-    <span *ngFor="let tag of product.tags">
-      {{tag}}
+    <span appTag *ngFor="let tag of product.tags">
+      {{ tag }}
     </span>
   </div>
   <div class="product-price">
     {{product.price}}
+    <img
+    *ngFor="let avatar of product.buyerAvatars"
+    [src]="avatar" alt="">
   </div>
 </div>

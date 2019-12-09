@@ -1,28 +1,14 @@
-import { NgModule } from '@angular/core';
+import { NgModule, InjectionToken } from '@angular/core';
 
 import { HomeRoutingModule } from './home-routing.module';
-import { SharedModule } from '../shared/shared.module';
+import { SharedModule } from '../shared';
 import { HomeContainerComponent, HomeDetailComponent } from './components';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { ParamInterceptor, NotificationInterceptor } from './interceptors';
+import { HomeService, token } from './services';
 
 @NgModule({
-  declarations: [
-    HomeContainerComponent,
-    HomeDetailComponent
-  ],
-  providers: [
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: ParamInterceptor,
-      multi: true
-    },
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: NotificationInterceptor,
-      multi: true
-    }
-  ],
+  declarations: [HomeContainerComponent, HomeDetailComponent],
+  // 传统写法，如果采用这种写法，就不能在 service 中写 `providedIn`
+  providers: [{ provide: token, useValue: 'http://localhost' }],
   imports: [SharedModule, HomeRoutingModule]
 })
 export class HomeModule {}

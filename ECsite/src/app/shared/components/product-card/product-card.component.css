@@ -61,3 +61,7 @@
 .price-avatar > img {
   position: relative;
 }
+
+product-tags > span {
+  margin-right: 5px;
+}

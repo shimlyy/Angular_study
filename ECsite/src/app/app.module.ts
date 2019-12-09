@@ -4,15 +4,15 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { SharedModule } from './shared/shared.module';
+import { SharedModule } from './shared';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeModule, NotificationInterceptor, ParamInterceptor } from './home';
-
-import localeZh from '@angular/common/locales/zh-Hans';
 import { RecommendModule } from './recommend';
 import { MyModule } from './my';
-import { ChatModule } from './chat';
 import { CategoryModule } from './category';
+import { ChatModule } from './chat';
+
+import localeZh from '@angular/common/locales/zh-Hans';
 
 @NgModule({
   declarations: [AppComponent],
@@ -24,8 +24,8 @@ import { CategoryModule } from './category';
     HomeModule,
     RecommendModule,
     MyModule,
-    ChatModule,
-    CategoryModule
+    CategoryModule,
+    ChatModule
   ],
   providers: [
     {
